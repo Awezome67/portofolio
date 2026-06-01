@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Edit via Prisma Studio — see prisma/FILL_YOUR_CONTENT.md
+model Profile {
+  id        Int     @id @default(1)
+  name      String  // FILL: your full name
+  headline  String  // FILL: short tagline
+  bio       String  // FILL: about-me paragraph
+  email     String? // FILL: contact email (optional)
+  location  String? // FILL: city / country (optional)
+  imageUrl  String  // FILL: e.g. /images/profile/profile.png
+}
+
+model SocialLink {
+  id       Int    @id @default(autoincrement())
+  platform String // FILL: e.g. GitHub
+  url      String // FILL: full profile URL
+  iconUrl  String // FILL: e.g. /images/socials/github.svg
+  order    Int    @default(0)
+}
+
+model Skill {
+  id       Int    @id @default(autoincrement())
+  name     String // FILL: must match a key in src/lib/skill-colors.ts for brand color
+  iconUrl  String // FILL: e.g. /images/tech/javascript.svg
+  category String // FILL: e.g. Languages, Databases, Tools
+  order    Int    @default(0)
+}
+
+model Experience {
+  id           Int       @id @default(autoincrement())
+  title        String    // FILL: role or position
+  organization String    // FILL: school, company, or lab
+  location     String?   // FILL: optional
+  description  String    // FILL: what you did
+  startDate    DateTime  // FILL: start date
+  endDate      DateTime? // FILL: end date (null if ongoing)
+  isCurrent    Boolean   @default(false)
+  order        Int       @default(0)
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String   // FILL: project name
+  description String   // FILL: short summary
+  imageUrl    String   // FILL: thumbnail under public/
+  githubUrl   String   // FILL: repository URL
+  liveUrl     String?  // FILL: demo URL (optional)
+  techStack   String[] @default([])
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+}
