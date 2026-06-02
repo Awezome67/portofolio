@@ -1,10 +1,13 @@
 import { defineConfig } from '@prisma/config'
+import * as dotenv from 'dotenv'
+
+// Paksa agar variabel di file .env terbaca oleh sistem
+dotenv.config()
 
 export default defineConfig({
   datasource: {
-    // URL Pooler (6543) untuk kebutuhan aplikasi sehari-hari
     url: process.env.DATABASE_URL,
-    // URL Direct (5432) yang diambil dari menu ORM Supabase untuk kebutuhan migrasi/db push
+    // use shadowDatabaseUrl for migrations when using a separate database
     shadowDatabaseUrl: process.env.DIRECT_URL,
   },
 })
