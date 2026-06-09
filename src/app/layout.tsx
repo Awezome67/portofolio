@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Informatics Student",
+  title: "Azriel Winnermore Zebua | Informatics Student",
   description:
     "Personal portfolio showcasing projects, skills, experience, and contact information.",
 };
