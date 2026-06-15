@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     "Personal portfolio showcasing projects, skills, experience, and contact information.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
