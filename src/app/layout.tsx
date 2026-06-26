@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "Azriel Winnermore Zebua | Informatics Student",
   description:
     "Personal portfolio showcasing projects, skills, experience, and contact information.",
+  icons: {
+    icon: "/images/logo/logo.svg",
+  },
 };
 
 export const viewport = {

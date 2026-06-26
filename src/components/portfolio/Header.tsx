@@ -34,7 +34,7 @@ export function Header({ name }: { name: string }) {
       <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6">
         <a
           href="#home"
-          className="flex items-center gap-2 transition hover:opacity-90"
+          className="flex items-center transition hover:opacity-90"
           aria-label={`${name} home`}
         >
           <Image
@@ -44,9 +44,6 @@ export function Header({ name }: { name: string }) {
             height={36}
             className="h-9 w-9"
           />
-          <span className="font-mono text-sm font-medium tracking-tight text-white/90">
-            {name.split(" ")[0]}
-          </span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex">
