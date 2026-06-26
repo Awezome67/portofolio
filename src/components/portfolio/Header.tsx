@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -33,11 +34,19 @@ export function Header({ name }: { name: string }) {
       <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6">
         <a
           href="#home"
-          className="font-mono text-sm font-medium tracking-tight text-white/90 transition hover:text-cyan-300"
+          className="flex items-center gap-2 transition hover:opacity-90"
+          aria-label={`${name} home`}
         >
-          <span className="text-cyan-400">&lt;</span>
-          {name.split(" ")[0]}
-          <span className="text-cyan-400"> /&gt;</span>
+          <Image
+            src="/images/logo/logo.svg"
+            alt="Portfolio logo"
+            width={36}
+            height={36}
+            className="h-9 w-9"
+          />
+          <span className="font-mono text-sm font-medium tracking-tight text-white/90">
+            {name.split(" ")[0]}
+          </span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex">
