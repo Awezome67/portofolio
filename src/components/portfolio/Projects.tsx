@@ -56,14 +56,14 @@ function ProjectCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c18] via-transparent to-transparent opacity-80" />
         {project.featured ? (
-          <span className="absolute right-4 top-4 rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-medium text-cyan-200 ring-1 ring-cyan-400/30">
+          <span className="absolute right-4 top-4 rounded-full bg-cyan-500/30 px-3 py-1 text-xs font-semibold text-cyan-100 ring-1 ring-cyan-400/50">
             Featured
           </span>
         ) : null}
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-white/55">
+        <h3 className="text-xl font-bold text-white">{project.title}</h3>
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-white/80">
           {project.description}
         </p>
         {project.techStack.length > 0 ? (
@@ -71,7 +71,7 @@ function ProjectCard({
             {project.techStack.map((tech) => (
               <li
                 key={tech}
-                className="rounded-full bg-white/5 px-3 py-1 font-mono text-xs text-white/60"
+                className="rounded-full bg-white/10 px-3 py-1 font-mono text-xs font-medium text-white/85"
               >
                 {tech}
               </li>
@@ -83,7 +83,7 @@ function ProjectCard({
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-cyan-300 transition hover:text-cyan-200"
+            className="text-sm font-semibold text-cyan-300 transition hover:text-cyan-200"
           >
             Source code →
           </a>
@@ -92,7 +92,7 @@ function ProjectCard({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-violet-300 transition hover:text-violet-200"
+              className="text-sm font-semibold text-violet-300 transition hover:text-violet-200"
             >
               Live demo →
             </a>

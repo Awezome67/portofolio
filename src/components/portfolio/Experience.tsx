@@ -17,7 +17,7 @@ export function ExperienceSection({
         />
         <div className="relative space-y-0">
           <div
-            className="absolute left-[11px] top-2 bottom-2 w-px bg-gradient-to-b from-cyan-500/50 via-violet-500/30 to-transparent md:left-[15px]"
+            className="absolute left-[11px] top-2 bottom-2 w-px bg-gradient-to-b from-cyan-400/70 via-violet-400/50 to-transparent md:left-[15px]"
             aria-hidden
           />
           {experiences.map((exp) => (
@@ -32,17 +32,17 @@ export function ExperienceSection({
                 <span className="h-2 w-2 rounded-full bg-cyan-400" />
               </span>
               <div>
-                <p className="font-mono text-xs text-cyan-400/80">
+                <p className="font-mono text-xs font-semibold text-cyan-300">
                   {formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
                 </p>
                 {exp.location ? (
-                  <p className="mt-1 text-sm text-white/40">{exp.location}</p>
+                  <p className="mt-1 text-sm font-medium text-white/75">{exp.location}</p>
                 ) : null}
               </div>
               <div className="glass glass-hover rounded-2xl p-6 transition">
-                <h3 className="text-lg font-semibold text-white">{exp.title}</h3>
-                <p className="mt-1 text-violet-300/90">{exp.organization}</p>
-                <p className="mt-4 leading-relaxed text-white/60">
+                <h3 className="text-lg font-bold text-white">{exp.title}</h3>
+                <p className="mt-1 font-semibold text-violet-200">{exp.organization}</p>
+                <p className="mt-4 leading-relaxed text-white/80">
                   {exp.description}
                 </p>
                 {exp.isCurrent ? (

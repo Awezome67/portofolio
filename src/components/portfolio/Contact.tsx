@@ -25,14 +25,14 @@ export function Contact({
               <p className="text-2xl font-semibold text-white">
                 Ready to work together?
               </p>
-              <p className="mt-3 text-white/55">
+              <p className="mt-3 text-white/80">
                 Reach out via email or connect on social media. I typically
                 respond within a few days.
               </p>
               {profile.email ? (
                 <a
                   href={`mailto:${profile.email}`}
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-3 font-mono text-sm text-cyan-200 ring-1 ring-white/10 transition hover:bg-white/10"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 font-mono text-sm font-semibold text-cyan-300 ring-1 ring-white/20 transition hover:bg-white/15"
                 >
                   {profile.email}
                 </a>
@@ -52,9 +52,9 @@ export function Contact({
                     alt=""
                     width={24}
                     height={24}
-                    className="invert opacity-80"
+                    className="invert opacity-100"
                   />
-                  <span className="font-medium text-white/80">
+                  <span className="font-semibold text-white">
                     {social.platform}
                   </span>
                 </a>

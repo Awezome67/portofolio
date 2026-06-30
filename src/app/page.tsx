@@ -23,7 +23,7 @@ export default async function Home() {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <h1 className="text-2xl font-semibold text-white">Portfolio not set up yet</h1>
-        <p className="mt-3 max-w-md text-white/60">
+        <p className="mt-3 max-w-md text-white/90">
           Run database migrations and seed your content:
         </p>
         <pre className="mt-6 rounded-xl bg-white/5 px-4 py-3 font-mono text-sm text-cyan-200">
@@ -36,7 +36,7 @@ export default async function Home() {
   return (
     <>
       <div className="pointer-events-none fixed inset-0 bg-mesh" aria-hidden />
-      <div className="pointer-events-none fixed inset-0 grid-overlay opacity-40" aria-hidden />
+      <div className="pointer-events-none fixed inset-0 grid-overlay opacity-20" aria-hidden />
       <Header name={profile.name} />
       <main className="relative">
         <Hero profile={profile} socials={socials} />

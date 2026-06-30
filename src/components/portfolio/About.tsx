@@ -18,7 +18,7 @@ export function About({ profile }: { profile: Profile }) {
           description="A snapshot of who I am and what drives my work as a student developer."
         />
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-          <p className="text-lg leading-relaxed text-white/65 whitespace-pre-line">
+          <p className="text-lg leading-relaxed text-white/85 whitespace-pre-line">
             {profile.bio}
           </p>
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
@@ -27,10 +27,10 @@ export function About({ profile }: { profile: Profile }) {
                 key={item.label}
                 className="glass glass-hover rounded-2xl p-5 transition"
               >
-                <p className="font-mono text-xs uppercase tracking-wider text-cyan-400/70">
+                <p className="font-mono text-xs font-semibold uppercase tracking-wider text-cyan-300">
                   {item.label}
                 </p>
-                <p className="mt-2 font-medium text-white">{item.value}</p>
+                <p className="mt-2 font-semibold text-white">{item.value}</p>
               </div>
             ))}
           </div>

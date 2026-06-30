@@ -51,7 +51,7 @@ export function Header({ name }: { name: string }) {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-2 text-sm text-white/60 transition hover:bg-white/5 hover:text-white"
+              className="rounded-full px-4 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 hover:text-white"
             >
               {item.label}
             </a>
@@ -61,7 +61,7 @@ export function Header({ name }: { name: string }) {
         <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className="hidden rounded-full bg-gradient-to-r from-cyan-500/20 to-violet-500/20 px-4 py-2 text-sm font-medium text-cyan-200 ring-1 ring-cyan-400/30 transition hover:from-cyan-500/30 hover:to-violet-500/30 md:inline-flex"
+            className="hidden rounded-full bg-gradient-to-r from-cyan-500/30 to-violet-500/30 px-4 py-2 text-sm font-bold text-cyan-100 ring-1 ring-cyan-400/50 transition hover:from-cyan-500/40 hover:to-violet-500/40 md:inline-flex"
           >
             Say hello
           </a>
@@ -99,7 +99,7 @@ export function Header({ name }: { name: string }) {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-sm text-white/70 transition hover:bg-white/5 hover:text-white"
+                  className="rounded-2xl px-4 py-3 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
                 >
                   {item.label}
                 </a>
@@ -107,7 +107,7 @@ export function Header({ name }: { name: string }) {
               <a
                 href="#contact"
                 onClick={() => setMenuOpen(false)}
-                className="mt-2 rounded-2xl bg-cyan-500/10 px-4 py-3 text-sm font-medium text-cyan-200 transition hover:bg-cyan-500/15"
+                className="mt-2 rounded-2xl bg-cyan-500/20 px-4 py-3 text-sm font-bold text-cyan-100 transition hover:bg-cyan-500/30"
               >
                 Say hello
               </a>
