@@ -4,9 +4,9 @@ import { SectionHeading } from "./SectionHeading";
 export function About({ profile }: { profile: Profile }) {
   // FILL: edit these three cards (or remove the block in the JSX below)
   const highlights = [
-    { label: "Focus", value: "Full-stack & mobile" }, // FILL
+    { label: "Focus", value: "CyberSecurity" }, // FILL
     { label: "Studying", value: "Informatics" }, // FILL
-    { label: "Interests", value: "Cybersecurity, Computer Networks, Full-stack & mobile" }, // FILL
+    { label: "Interests", value: "Computer Networks, Full-Stack Web & Mobile" }, // FILL
   ];
 
   return (
