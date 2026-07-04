@@ -14,18 +14,11 @@ export function Projects({ projects }: { projects: Project[] }) {
           title="Things I've shipped"
           description="Selected work from coursework, hackathons, and side projects."
         />
-        <div className="grid gap-6 md:grid-cols-2">
-          {featured.map((project) => (
-            <ProjectCard key={project.id} project={project} large />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} large={project.featured} />
           ))}
         </div>
-        {others.length > 0 ? (
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
-            {others.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        ) : null}
       </div>
     </section>
   );
@@ -40,12 +33,11 @@ function ProjectCard({
 }) {
   return (
     <article
-      className={`glass glass-hover group overflow-hidden rounded-2xl transition ${
-        large ? "md:col-span-1" : ""
-      }`}
+      className={`glass glass-hover group overflow-hidden rounded-2xl transition flex flex-col h-full ${large ? "md:col-span-1" : ""
+        }`}
     >
       <div
-        className={`relative overflow-hidden ${large ? "aspect-[16/10]" : "aspect-video"}`}
+        className={"relative overflow-hidden " + (large ? "h-80" : "h-64") + " w-full"}
       >
         <Image
           src={project.imageUrl}

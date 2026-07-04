@@ -12,16 +12,20 @@ export function About({ profile }: { profile: Profile }) {
   return (
     <section id="about" className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading
-          label="About"
-          title="Building with curiosity and care"
-          description="A snapshot of who I am and what drives my work as a student developer."
-        />
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-          <p className="text-lg leading-relaxed text-white/85 whitespace-pre-line">
-            {profile.bio}
-          </p>
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+          {/* Left column: heading + bio */}
+          <div>
+            <SectionHeading
+              label="About"
+              title="Building with curiosity and care"
+              description="A snapshot of who I am and what drives my work as a student developer."
+            />
+            <p className="text-lg leading-relaxed text-white/85 whitespace-pre-line">
+              {profile.bio}
+            </p>
+          </div>
+          {/* Right column: highlight cards — aligned to top of left column */}
+          <div className="grid gap-4">
             {highlights.map((item) => (
               <div
                 key={item.label}

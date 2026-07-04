@@ -42,8 +42,8 @@ export default async function Home() {
         <Hero profile={profile} socials={socials} />
         <About profile={profile} />
         <Skills skills={skills} />
-        <ExperienceSection experiences={experiences} />
         <Projects projects={projects} />
+        <ExperienceSection experiences={experiences} />
         <Contact profile={profile} socials={socials} />
       </main>
       <Footer name={profile.name} />
